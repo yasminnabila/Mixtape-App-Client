@@ -19,7 +19,7 @@ export default {
     id="navbar-menu"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Musicscape</a>
+      <a class="navbar-brand" href="#">Mixtape</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -65,13 +65,15 @@ export default {
             href="#"
             >Log Out</a
           >
-          <a
+          <router-link class="nav-link" v-if="isLogin === false" to="/login"
+            >Log In</router-link
+          >
+          <!-- <a
             v-if="isLogin === false"
             @click.prevent="$router.push('/login')"
             class="nav-link"
-            href="#"
             >Log In</a
-          >
+          > -->
         </div>
       </div>
     </div>
