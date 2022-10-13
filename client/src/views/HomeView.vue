@@ -10,10 +10,15 @@ export default {
     ...mapState(useIndexStore, ["newReleases"]),
   },
   methods: {
-    ...mapActions(useIndexStore, ["getNewReleases", "snapPayment"]),
+    ...mapActions(useIndexStore, [
+      "getNewReleases",
+      "snapPayment",
+      "checkLogin",
+    ]),
   },
   created() {
     this.getNewReleases();
+    this.checkLogin();
   },
 };
 </script>
@@ -23,8 +28,9 @@ export default {
     class="container-fluid"
     style="background-color: #b2dfdb; min-height: 100vh"
   >
-    <NavBar />
-
+    <div class="row">
+      <NavBar />
+    </div>
     <!-- HEADER -->
     <div class="container-sm text-center mt-5 mb-10" data-aos="zoom-in">
       <h1 class="display-4 justify-content-center">

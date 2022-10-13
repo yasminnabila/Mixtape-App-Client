@@ -19,7 +19,7 @@ export default {
     id="navbar-menu"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mixtape</a>
+      <a class="navbar-brand flex me-30" href="#">Mixtape</a>
       <button
         class="navbar-toggler"
         type="button"

@@ -8,6 +8,8 @@ export const useIndexStore = defineStore("index", {
     return {
       isLogin: false,
       newReleases: [],
+      album: [],
+      artist: [],
       paymentResponse: [],
     };
   },
@@ -36,7 +38,7 @@ export const useIndexStore = defineStore("index", {
         this.email = "";
         this.password = "";
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data.message);
       }
     },
     async submitRegister(user) {
@@ -72,7 +74,37 @@ export const useIndexStore = defineStore("index", {
 
         this.newReleases = dataNewReleases.data.data;
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data.message);
+      }
+    },
+    async getAlbumById(id) {
+      try {
+        const albumDetail = await axios({
+          method: "GET",
+          url: baseUrl + `/api/get-album?albumId=${id}`,
+          headers: {
+            access_token: localStorage.getItem("access_token"),
+          },
+        });
+        console.log(albumDetail);
+        this.album = albumDetail.data.data;
+      } catch (error) {
+        console.log(error.response.data.message);
+      }
+    },
+    async getArtistById(id) {
+      try {
+        const artistDetail = await axios({
+          method: "GET",
+          url: baseUrl + `/api/get-artist?artistId=${id}`,
+          headers: {
+            access_token: localStorage.getItem("access_token"),
+          },
+        });
+        console.log(artistDetail);
+        this.artist = artistDetail.data.data;
+      } catch (error) {
+        console.log(error.response.data.message);
       }
     },
     async snapPayment() {
@@ -88,20 +120,13 @@ export const useIndexStore = defineStore("index", {
 
         snap.pay(`${data.transactionToken}`, {
           onSuccess: async (result) => {
-            /* You may add your own implementation here */
-            // alert("payment success!");
-            console.log(result);
             this.paymentResponse = result;
           },
           // onPending: function (result) {
-          //   /* You may add your own implementation here */
-          //   alert("wating your payment!");
-          //   console.log(result);
+          //   this.paymentResponse = result;
           // },
           // onError: function (result) {
-          //   /* You may add your own implementation here */
-          //   alert("payment failed!");
-          //   console.log(result);
+          //   this.paymentResponse = result;
           // },
           // onClose: function () {
           //   /* You may add your own implementation here */
@@ -109,7 +134,7 @@ export const useIndexStore = defineStore("index", {
           // },
         });
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data.message);
       }
     },
   },
