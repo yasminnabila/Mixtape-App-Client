@@ -56,4 +56,5 @@ export default {
       </div>
     </div>
     <!-- NEW RELEASES END -->
+  </div>
 </template>
