@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-const baseUrl = "https://iproject-mixtape-app.herokuapp.com";
+const baseUrl = "https://iproject-mixtape.herokuapp.com";
 
 export const useIndexStore = defineStore("index", {
   state: () => {

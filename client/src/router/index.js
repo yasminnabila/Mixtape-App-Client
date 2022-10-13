@@ -30,4 +30,15 @@ const router = createRouter({
   ],
 });
 
+router.beforeEach((to, from) => {
+  if (!localStorage.getItem("access_token") && to.name === "myplaylist") {
+    return { path: "/login" };
+  } else if (
+    (localStorage.getItem("access_token") && to.name === "login") ||
+    (localStorage.getItem("access_token") && to.name === "register")
+  ) {
+    return { path: "/" };
+  }
+});
+
 export default router;
