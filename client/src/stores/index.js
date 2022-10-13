@@ -6,6 +6,7 @@ export const useIndexStore = defineStore("index", {
   state: () => {
     return {
       isLogin: false,
+      newReleases: [],
     };
   },
   actions: {
@@ -56,6 +57,21 @@ export const useIndexStore = defineStore("index", {
     async handleLogOut() {
       localStorage.clear();
       this.$router.push(`/`);
+    },
+    async getNewReleases() {
+      try {
+        const dataNewReleases = await axios({
+          method: "GET",
+          url: baseUrl + `/api/get-new-releases`,
+          headers: {
+            access_token: localStorage.getItem("access_token"),
+          },
+        });
+
+        this.newReleases = dataNewReleases.data.data;
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 });

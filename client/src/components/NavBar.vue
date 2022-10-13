@@ -20,7 +20,7 @@ export default {
       aria-label="Eleventh navbar example"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">iMixtape</a>
+        <a class="navbar-brand" href="#">Musicscape</a>
         <button
           class="navbar-toggler"
           type="button"
