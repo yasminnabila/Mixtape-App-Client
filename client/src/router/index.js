@@ -31,7 +31,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  if (!localStorage.getItem("access_token") && to.name === "myplaylist") {
+  if (!localStorage.getItem("access_token") && to.name === "home") {
     return { path: "/login" };
   } else if (
     (localStorage.getItem("access_token") && to.name === "login") ||
