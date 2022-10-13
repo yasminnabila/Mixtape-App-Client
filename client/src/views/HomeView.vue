@@ -56,9 +56,4 @@ export default {
       </div>
     </div>
     <!-- NEW RELEASES END -->
-
-    <div class="row">
-      <div class="col-2 border">col 1</div>
-    </div>
-  </div>
 </template>
