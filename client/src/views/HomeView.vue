@@ -10,7 +10,7 @@ export default {
     ...mapState(useIndexStore, ["newReleases"]),
   },
   methods: {
-    ...mapActions(useIndexStore, ["getNewReleases"]),
+    ...mapActions(useIndexStore, ["getNewReleases", "snapPayment"]),
   },
   created() {
     this.getNewReleases();
@@ -35,6 +35,12 @@ export default {
       </p>
     </div>
     <!-- HEADER -->
+
+    <!-- GO PREMIUM -->
+    <div class="d-flex justify-content-center">
+      <button @click="snapPayment" id="pay-button">Pay!</button>
+    </div>
+    <!-- GO PREMIUM END -->
 
     <!-- HEADER -->
     <div class="container-sm text-center mt-5" data-aos="zoom-in">
