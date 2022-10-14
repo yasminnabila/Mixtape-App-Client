@@ -4,6 +4,7 @@ import LoginView from "../views/LoginView.vue";
 import RegisterView from "../views/RegisterView.vue";
 import MyPlaylist from "../views/MyPlaylist.vue";
 import AlbumDetail from "../views/AlbumDetail.vue";
+import NewRelease from "../views/NewRelease.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,17 +34,22 @@ const router = createRouter({
       name: "myplaylist",
       component: MyPlaylist,
     },
+    {
+      path: "/new-release",
+      name: "newrelease",
+      component: NewRelease,
+    },
   ],
 });
 
 router.beforeEach((to, from) => {
-  if (!localStorage.getItem("access_token") && to.name === "home") {
-    return { path: "/login" };
+  if (!localStorage.getItem("access_token") && to.name === "login") {
+    return { path: "/" };
   } else if (
     (localStorage.getItem("access_token") && to.name === "login") ||
     (localStorage.getItem("access_token") && to.name === "register")
   ) {
-    return { path: "/" };
+    return { path: "/new-release" };
   }
 });
 
