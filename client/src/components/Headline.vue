@@ -20,7 +20,7 @@ export default {
       </div>
       <div class="d-flex justify-content-center align-items-center">
         <button
-          @click.prevent="$router.push('/new-release')"
+          @click.prevent="$router.push('/premium')"
           class="btn btn-light border-0"
           type="button"
           style="background-color: #1db954"

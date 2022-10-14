@@ -33,7 +33,7 @@ export const useIndexStore = defineStore("index", {
         });
         console.log(dataLogin, "INI DATA LOGIN");
         localStorage.setItem("access_token", dataLogin.data.access_token);
-        this.$router.push("/");
+        this.$router.push("/new-release");
         this.isLogin = true;
         this.email = "";
         this.password = "";

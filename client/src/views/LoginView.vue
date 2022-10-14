@@ -21,7 +21,7 @@ export default {
 <template>
   <section
     class="d-flex justify-content-center align-items-center"
-    style="background-color: #b2dfdb; min-height: 100vh"
+    style="background-color: black; min-height: 100vh"
     id="login-section"
   >
     <div
@@ -31,11 +31,15 @@ export default {
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-sm-8 col-sm-2">
           <div class="row justify-content-center">
-            <div class="col-md-5 col-lg-6 col-xl-6">
-              <p class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+            <div class="col-md-5 col-lg-12 col-xl-6">
+              <p
+                class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4 text-light bg-black"
+              >
                 Hello!
               </p>
-              <p class="text-center h4 h3 mb-3 fw-normal">Please sign in</p>
+              <p class="text-center h4 h3 mb-3 fw-normal text-light bg-black">
+                Please sign in
+              </p>
               <div class="mt-5 form-signin w-100 m-auto">
                 <form
                   id="login-form"
@@ -72,9 +76,9 @@ export default {
                     </label>
                   </div>
                   <button
-                    class="w-100 btn btn-lg btn-primary"
+                    class="w-100 btn btn-light border-0"
                     type="submit"
-                    style="background-color: #006064"
+                    style="background-color: #1db954"
                     @click="submitLogin"
                   >
                     Sign in
@@ -82,12 +86,12 @@ export default {
                 </form>
               </div>
 
-              <p class="text-center text-muted mt-5 mb-0">
+              <p class="text-center text-light bg-black mt-5 mb-0">
                 Not registered?
                 <a
                   @click.prevent="$router.push('/register')"
                   href="#!"
-                  class="fw-bold text-body"
+                  class="fw-bold text-light bg-black"
                   ><u>Sign Up</u></a
                 >
               </p>

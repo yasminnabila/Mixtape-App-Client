@@ -19,7 +19,7 @@ export default {
     id="navbar-menu"
   >
     <div class="container-fluid">
-      <a class="navbar-brand flex me-30" href="#">Mixtape</a>
+      <a class="navbar-brand flex me-30" href="#">Spotify</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -44,8 +44,8 @@ export default {
             >
           </li>
           <li class="nav-item">
-            <a @click="$router.push('/my-playlist')" class="nav-link" href="#"
-              >My Mixtape</a
+            <a @click="$router.push('/premium')" class="nav-link" href="#"
+              >Premium</a
             >
           </li>
         </ul>

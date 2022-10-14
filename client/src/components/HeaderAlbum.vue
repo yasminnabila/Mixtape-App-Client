@@ -8,8 +8,8 @@ export default {
 <template>
   <section class="container mt-0">
     <div class="row mb-5 d-flex align-items-top">
-      <div class="col-2">
-        <img :src="imageUrl" width="200"/>
+      <div class="col-2 align-items-center">
+        <img :src="imageUrl" width="170" />
       </div>
       <div class="col-10">
         <h3 class="fw-light">{{ headerType }}</h3>

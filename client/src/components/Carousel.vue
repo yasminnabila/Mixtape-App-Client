@@ -10,38 +10,36 @@ export default {
     class="carousel slide"
     data-bs-ride="carousel"
   >
-    <!-- INPUT IMAGE -->
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
-          src="../assets/images/Carousel_1.png"
+          src="../assets/Carousel-1-cropped.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src=""
+          src="../assets/Carousel-2-cropped.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src=""
+          src="../assets/Carousel-3-cropped.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src=""
+          src="../assets/Carousel-4-cropped.png"
           class="d-block w-100"
           alt="..."
         />
       </div>
     </div>
-    <!-- INPUT IMAGE END -->
     <button
       class="carousel-control-prev"
       type="button"

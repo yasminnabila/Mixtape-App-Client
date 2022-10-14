@@ -4,18 +4,15 @@ import Cards from "../components/Cards.vue";
 import { mapActions, mapState } from "pinia";
 import { useIndexStore } from "../stores";
 import Headline from "../components/Headline.vue";
+import Carousel from "../components/Carousel.vue";
 export default {
   name: "NewRelease",
-  components: { NavBar, Cards, Headline },
+  components: { NavBar, Cards, Headline, Carousel },
   computed: {
     ...mapState(useIndexStore, ["newReleases"]),
   },
   methods: {
-    ...mapActions(useIndexStore, [
-      "getNewReleases",
-      "snapPayment",
-      "checkLogin",
-    ]),
+    ...mapActions(useIndexStore, ["getNewReleases", "checkLogin"]),
   },
   created() {
     this.getNewReleases();
@@ -27,20 +24,24 @@ export default {
 <template>
   <div
     class="container-fluid"
-    style="background-color: #b2dfdb; min-height: 100vh"
+    style="background-color: black; min-height: 100vh"
   >
     <div class="row">
       <NavBar />
     </div>
-
-    <div class="d-flex justify-content-center">
-      <button @click="snapPayment" id="pay-button">Pay!</button>
+    <div class="d-flex mt-4 justify-content-center align-items-center">
+      <Carousel />
     </div>
 
     <!-- HEADER -->
     <div class="container-sm text-center mt-5" data-aos="zoom-in">
-      <p class="h2 text-muted justify-content-center">
-        Browse for today's new release albums!
+      <p
+        class="h2 display-5 fw-normal justify-content-center text-light bg-black"
+      >
+        Release Radar
+      </p>
+      <p class="h4 text-muted bg-black">
+        Browse for new releases, as soon as they drop
       </p>
     </div>
     <!-- HEADER -->
