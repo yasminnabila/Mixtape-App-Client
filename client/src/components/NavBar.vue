@@ -19,7 +19,7 @@ export default {
     id="navbar-menu"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Musicscape</a>
+      <a class="navbar-brand flex me-30" href="#">Spotify</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -44,8 +44,8 @@ export default {
             >
           </li>
           <li class="nav-item">
-            <a @click="$router.push('/my-playlist')" class="nav-link" href="#"
-              >My Mixtape</a
+            <a @click="$router.push('/premium')" class="nav-link" href="#"
+              >Premium</a
             >
           </li>
         </ul>
@@ -65,13 +65,15 @@ export default {
             href="#"
             >Log Out</a
           >
-          <a
+          <router-link class="nav-link" v-if="isLogin === false" to="/login"
+            >Log In</router-link
+          >
+          <!-- <a
             v-if="isLogin === false"
             @click.prevent="$router.push('/login')"
             class="nav-link"
-            href="#"
             >Log In</a
-          >
+          > -->
         </div>
       </div>
     </div>
