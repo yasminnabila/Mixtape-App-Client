@@ -50,7 +50,7 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
   if (localStorage.getItem("access_token") && to.name === "login") {
-    return { path: "/" };
+    return { path: "/new-release" };
   }
 });
 
