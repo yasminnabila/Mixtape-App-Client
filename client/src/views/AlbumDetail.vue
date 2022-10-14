@@ -3,6 +3,7 @@ import { mapActions, mapState } from "pinia";
 import NavBar from "../components/NavBar.vue";
 import TableAlbum from "../components/TableAlbum.vue";
 import { useIndexStore } from "../stores";
+import HeaderAlbum from "../components/HeaderAlbum.vue";
 export default {
   name: "AlbumDetail",
   methods: {
@@ -14,7 +15,7 @@ export default {
   async created() {
     await this.getAlbumById(this.$route.params.id);
   },
-  components: { NavBar, TableAlbum },
+  components: { NavBar, TableAlbum, HeaderAlbum },
 };
 </script>
 
@@ -39,18 +40,20 @@ export default {
           align-items: center;
           transform: scale(85%);
         "
-      >
-        <div>
-          <h3 class="display-3">Album Detail</h3>
-        </div>
-      </div>
+      ></div>
     </div>
 
-    <!-- TABLE -->
+    <!-- TABLE ALBUM DETAIL -->
     <div class="container my-6" style="transform: scale(85%)">
       <div class="shadow-4 rounded-5 overflow-hidden">
+        <HeaderAlbum
+          headerType="Album"
+          :titleName="album?.name"
+          :imageUrl="album?.images?.[0]?.url"
+        />
         <TableAlbum :tracks="album?.tracks?.items" />
       </div>
     </div>
+    <!-- TABLE ALBUM DETAIL  -->
   </div>
 </template>

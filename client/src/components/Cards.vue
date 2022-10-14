@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="card shadow-sm" style="width: 16rem; height: 22rem">
+  <div class="card shadow-sm mt-20" style="width: 16rem; height: 22rem">
     <div>
       <router-link :to="`/${typeCard}/${data?.id || data?.name}`">
         <img
