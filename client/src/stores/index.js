@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-const baseUrl = "https://iproject-mixtape.herokuapp.com";
-// const baseUrl = "http://localhost:3000";
+// const baseUrl = "https://iproject-mixtape.herokuapp.com";
+const baseUrl = "http://localhost:3000";
 
 export const useIndexStore = defineStore("index", {
   state: () => {
@@ -43,6 +43,7 @@ export const useIndexStore = defineStore("index", {
     },
     async submitRegister(user) {
       try {
+        console.log(user, "ini di store");
         await axios({
           method: `POST`,
           url: baseUrl + `/register`,

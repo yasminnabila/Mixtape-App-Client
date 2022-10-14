@@ -82,7 +82,7 @@ export default {
                     class="w-100 btn btn-light border-0 mt-3"
                     type="submit"
                     style="background-color: #1db954"
-                    @click="submitRegister"
+                    @click="submitRegister(user)"
                   >
                     Sign up
                   </button>
