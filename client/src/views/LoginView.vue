@@ -46,7 +46,7 @@ export default {
                   @submit.prevent="submitLogin(user)"
                   method="post"
                 >
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <input
                       type="email"
                       class="form-control"
@@ -57,7 +57,7 @@ export default {
                     />
                     <label for="floatingInput">Email address</label>
                   </div>
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <input
                       type="password"
                       class="form-control"
@@ -70,16 +70,21 @@ export default {
                     <label for="floatingPassword">Password</label>
                   </div>
 
-                  <div class="checkbox mb-3">
+                  <div class="checkbox mb-3 text-light bg-black">
                     <label>
-                      <input type="checkbox" value="remember-me" /> Remember me
+                      <input
+                        class="text-light bg-black"
+                        type="checkbox"
+                        value="remember-me"
+                      />
+                      Remember me
                     </label>
                   </div>
                   <button
                     class="w-100 btn btn-light border-0"
                     type="submit"
                     style="background-color: #1db954"
-                    @click="submitLogin"
+                    @click="submitLogin(user)"
                   >
                     Sign in
                   </button>
