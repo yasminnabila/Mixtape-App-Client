@@ -11,6 +11,7 @@ export const useIndexStore = defineStore("index", {
       album: [],
       artist: [],
       paymentResponse: [],
+      whatPage: "home"
     };
   },
   actions: {

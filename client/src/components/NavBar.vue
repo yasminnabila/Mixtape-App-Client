@@ -8,7 +8,7 @@ export default {
     ...mapActions(useIndexStore, ["handleLogOut", "checkLogin"]),
   },
   computed: {
-    ...mapWritableState(useIndexStore, ["isLogin"]),
+    ...mapWritableState(useIndexStore, ["isLogin", "whatPage"]),
   },
 };
 </script>
@@ -19,7 +19,14 @@ export default {
     id="navbar-menu"
   >
     <div class="container-fluid">
-      <a class="navbar-brand flex me-30" href="#">Spotify</a>
+      <a
+        @click.prevent="$router.push('/')"
+        class="navbar-brand flex me-30"
+        href="#"
+        ><img
+          src="../assets/Spotify_Logo_CMYK_Green.png"
+          style="max-width: 100px; margin-top: -7px"
+      /></a>
       <button
         class="navbar-toggler"
         type="button"

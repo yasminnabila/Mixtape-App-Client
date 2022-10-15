@@ -28,7 +28,7 @@ export default {
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-sm-8 col-sm-2">
           <div class="row justify-content-center">
-            <div class="col-md-5 col-lg-12 col-xl-6">
+            <div class="col-md-5 col-lg-12 col-xl-7">
               <p
                 class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4 text-light bg-black"
               >
@@ -41,9 +41,9 @@ export default {
                 <form
                   id="register-form"
                   @submit.prevent="submitRegister(user)"
-                  method="post"
+                  class="mx-1 mx-md-4"
                 >
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <input
                       type="text"
                       class="form-control"
@@ -54,18 +54,18 @@ export default {
                     />
                     <label for="floatingInput">Username</label>
                   </div>
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <input
                       type="email"
                       class="form-control"
                       id="register-email"
                       v-model="user.email"
-                      placeholder="email"
+                      placeholder="name@example.com"
                       required
                     />
                     <label for="floatingInput">Email address</label>
                   </div>
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <input
                       type="password"
                       class="form-control"
@@ -87,7 +87,7 @@ export default {
                     Sign up
                   </button>
                   <div>
-                    <p class="text-center text-light bg-blackmt-5 mt-3">
+                    <p class="text-center text-light bg-blackmt-5 mt-5">
                       I already have an account!
                       <a
                         @click.prevent="$router.push('/login')"

@@ -12,11 +12,11 @@ export default {
         <img :src="imageUrl" width="170" />
       </div>
       <div class="col-10">
-        <h3 class="fw-light">{{ headerType }}</h3>
-        <h1 class="-mt-4 mb-4 text-4xl">
+        <h3 class="fw-light text-light bg-black">{{ headerType }}</h3>
+        <h1 class="-mt-4 mb-4 text-4xl text-light bg-black">
           {{ titleName }}
         </h1>
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex align-items-center text-light bg-black">
           <div class="col-1">
             <h1><i class="bi bi-play-fill"></i></h1>
           </div>

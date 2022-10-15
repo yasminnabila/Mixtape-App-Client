@@ -22,7 +22,7 @@ export default {
 <template>
   <div
     class="container-fluid"
-    style="background-color: #b2dfdb; min-height: 100vh"
+    style="background-color: black; min-height: 100vh"
   >
     <!-- NAVBAR -->
     <div class="row">
@@ -45,13 +45,15 @@ export default {
 
     <!-- TABLE ALBUM DETAIL -->
     <div class="container my-6" style="transform: scale(85%)">
-      <div class="shadow-4 rounded-5 overflow-hidden">
+      <div class="shadow-4 overflow-hidden">
         <HeaderAlbum
           headerType="Album"
           :titleName="album?.name"
           :imageUrl="album?.images?.[0]?.url"
         />
-        <TableAlbum :tracks="album?.tracks?.items" />
+        <div class="shadow-4 rounded-3 overflow-hidden">
+          <TableAlbum :tracks="album?.tracks?.items" />
+        </div>
       </div>
     </div>
     <!-- TABLE ALBUM DETAIL  -->
