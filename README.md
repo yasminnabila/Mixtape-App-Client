@@ -21,6 +21,8 @@ Login details:
 - E-mail: admin@outlook.com
 - Password: 12345
 
+https://user-images.githubusercontent.com/108170309/204326564-60bc9401-73cc-4cdb-9ce0-d5e63023ea80.mp4
+
 ## Stack
 <a name="stack"></a>
 
