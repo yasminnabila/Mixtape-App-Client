@@ -16,7 +16,7 @@ Click on the card and user will be able to see album details and even stream the
 
 ## Demo
 
-Here is a working [_live demo_]https://iproject-mixtape.web.app/). 
+Here is a working [_live demo_](https://iproject-mixtape.web.app/). 
 Login details:
 - E-mail: admin@outlook.com
 - Password: 12345
